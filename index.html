@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM AddEventListener #1</title>
+    <link rel="stylesheet" href="source/style/style.css"
+</head>
+<body>
+    <h1>JavaScript addEventListener() Hands-On</h1>
+
+    <article>
+        <p>Click on the buttons below to see different actions:</p>
+    </article>
+
+    <section>
+        <button id="btnOne" onmouseover="zoomIn(this)" onmouseout="zoomBack(this)">Button 1</button>
+        <button id="btnTwo" onmouseover="zoomIn(this)" onmouseout="zoomBack(this)">Button 2</button>
+        <button id="btnThree" onmouseover="zoomIn(this)" onmouseout="zoomBack(this)">Button 3</button>
+    </section>
+
+    <script>
+        let bOne = document.getElementById("btnOne");
+        let bTwo = document.getElementById("btnTwo");
+        let bThree = document.getElementById("btnThree");
+        
+        //Add interactivity to the buttons
+        bOne.addEventListener("click", one);
+        bTwo.addEventListener("click", two);
+        bThree.addEventListener("click", three);
+
+        //Functions to prompt a message when buttons are clicked
+        function one(){
+            alert("Button 1 was clicked!");
+        }
+        function two(){
+            alert("Button 2 was clicked!");
+        }
+        function three(){
+            alert("Button 3 was clicked!");
+        }
+
+        //Animation when the mouse moves over and out of the buttons using JS
+        function zoomIn(buttons){
+            buttons.style.transform = "scale(110%, 110%)";
+            buttons.style.backgroundColor = "rgb(219, 163, 90)";
+            buttons.style.transitionDuration = "0.5s";
+        }
+        function zoomBack(buttons){
+            buttons.style.transform = "scale(100%, 100%)";
+            buttons.style.backgroundColor = "#fff";
+            buttons.style.transitionDuration = "0.5s";
+        }
+    </script>
+</body>
+</html>

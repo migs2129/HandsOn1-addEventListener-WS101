@@ -1,0 +1,47 @@
+@keyframes fadeInOut{
+    to{ transform: scale(120%);}
+}
+@keyframes slideInl{
+    0%{left: 1000px; opacity: 0%;}
+    100%{left: 0px; opacity: 100%;}
+}
+@keyframes slideIn {
+    0%{right:1000px;opacity: 0%;}
+    100%{right:0px; opacity: 100%;}
+}
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(235, 204, 162);
+}
+h1{
+    position: relative;
+    background-color:rgb(219, 163, 90);
+    margin: 5% 10% 3% 10%;
+    text-align: center;
+    padding: 2.5%;
+    border-radius: 10px;
+    animation: slideInl 1s;
+}
+article{
+    text-align: center;
+    font-size: 1.5rem;
+    animation: fadeInOut 3s infinite alternate;
+    animation-delay: 3s;
+}
+#btnOne, #btnTwo, #btnThree{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin-top: 2%;
+    cursor: pointer;
+    width: 30%;
+    padding: 1.5%;
+    background-color: #fff;
+    animation: slideIn 1s;
+}
