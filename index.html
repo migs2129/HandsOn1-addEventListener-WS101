@@ -14,9 +14,9 @@
     </article>
 
     <section>
-        <button id="btnOne" onmouseover="zoomIn(this)" onmouseout="zoomBack(this)">Button 1</button>
-        <button id="btnTwo" onmouseover="zoomIn(this)" onmouseout="zoomBack(this)">Button 2</button>
-        <button id="btnThree" onmouseover="zoomIn(this)" onmouseout="zoomBack(this)">Button 3</button>
+        <button id="btnOne" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">Button 1</button>
+        <button id="btnTwo" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">Button 2</button>
+        <button id="btnThree" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">Button 3</button>
     </section>
 
     <script>
@@ -46,7 +46,7 @@
             buttons.style.backgroundColor = "rgb(219, 163, 90)";
             buttons.style.transitionDuration = "0.5s";
         }
-        function zoomBack(buttons){
+        function zoomOut(buttons){
             buttons.style.transform = "scale(100%, 100%)";
             buttons.style.backgroundColor = "#fff";
             buttons.style.transitionDuration = "0.5s";
